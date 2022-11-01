@@ -97,3 +97,18 @@ app.post('/clienteRazaoSocial', verificarClienteNaoExistente,(req, res) => {
         }
     })
 })
+
+// atualizar dados do cliente
+app.put('/cliente', (req, res) => {
+    const {idCliente, razaoSocial, telefone, endereco, faturamentoDeclarado} = req.body
+
+    mysqlConnection.query(
+        'UPDATE clientes SET razao_social = ?, telefone = ?, endereco = ?, faturamento_declarado = ? WHERE id_cliente = ?',
+        [razaoSocial, telefone, endereco, faturamentoDeclarado, idCliente], (err, rows, fields) => {
+        if(!err){
+            res.send(rows)
+        }else{
+            res.send(err)
+        }
+    })
+})
