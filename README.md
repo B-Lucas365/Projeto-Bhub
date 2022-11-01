@@ -15,7 +15,7 @@ armazenar, atualizar, consultar e deletar informações do cliente.</p>
 <h1>Como Rodar</h1>
 <p>Clone o repositório: git clone https://github.com/B-Lucas365/Projeto-Bhub</p>
 <p>instale as dependencias: yarn </p>
-<p>yarn dev</p>
+<p>execulte o projeto: yarn dev</p>
 <br>
 <p>O banco de dados foi criado em local host, por isso é necessario instalar o mySql installer e baixar o workbanch e o msql-server, após isso importar o arquivo
 do banco de dados.
