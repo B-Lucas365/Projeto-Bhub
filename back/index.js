@@ -112,3 +112,16 @@ app.put('/cliente', (req, res) => {
         }
     })
 })
+
+// Deletar dados do cliente
+app.delete('/cliente', verificarClienteNaoExistente,(req, res) => {
+    const {razaoSocial} = req.body
+
+    mysqlConnection.query('DELETE FROM clientes WHERE razao_social = ?', [razaoSocial], (err, rows, fields) => {
+        if(!err){
+            res.send(rows)
+        }else{
+            res.send(err)
+        }
+    })
+})
