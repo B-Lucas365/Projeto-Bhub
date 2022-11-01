@@ -7,10 +7,24 @@
 
 
 <h1>Descrição</h1>
-<p>Projeto proposto pela empresa BHub. Trata-se de um painel para administração de clientes da empresa, onde seja possivel 
-armazenar, atualizar, consultar e deletar informações do cliente.</p>
+<p>Projeto proposto pela empresa BHub. O desafio era criar uma api onde fosse possivel cadastrar, consultar, atualizar e deletar, como meio de obter um controle dos clientes da empresa, utilizando uma linguagem de programação e um banco de dados a nossa escolha. Escolhe utilizar o nodejs e banco de dados mySql, por possuir mais dominio. Como um bonus descidi consumir minha propria api utilizando react.js. </p>
 
 <br>
+
+<h1>Requisitos e regra de negócio</h1>
+
+Requisitos:
+[ x ] - Deve ser possivel criar uma conta <br>
+[ x ] - Deve ser possivel consultar as informações do cliente <br>
+[ x ] - Deve ser possivel atualizar os dados do cliente <br>
+[ x ] - Deve ser possivel deletar a conta <br>
+<br><br>
+Regras de negócio<br>
+[ x ] - Não deve ser possivel cadastrar uma conta com cnpj ja existente <br>
+[ x ] - Não deve ser possivel consultar informações de uma conta nao existente <br>
+[ x ] - Não deve ser possivel excluir uma conta não existente <br>
+
+
 
 <h1>Como Rodar</h1>
 <p>Clone o repositório: git clone https://github.com/B-Lucas365/Projeto-Bhub</p>
