@@ -9,11 +9,6 @@ export const Formulario = ({isOpen, onRequestClose, getAllClients}) => {
     const [telefone, setTelefone] = useState('')
     const [endereco, setEndereco] = useState('')
     const [faturamentoDeclarado, setFaturamentoDeclarado] = useState('')
-    const [agencia, setAgencia] = useState('')
-    const [conta, setConta] = useState('')
-    const [banco, setBanco] = useState('')
-
-
     function addNewClient(){
         let body = {    
             "razaoSocial": razaoSocial,
@@ -64,12 +59,6 @@ export const Formulario = ({isOpen, onRequestClose, getAllClients}) => {
                 </fieldset>
             </div >
             
-                <fieldset className="conta">
-                    <label htmlFor="">Dados Bancarios</label>
-                    <input type="text" value={agencia} onChange={(e) => setAgencia(e.target.value)} />
-                    <input type="text" value={conta} onChange={(e) => setConta(e.target.value)} />
-                    <input type="text" value={banco} onChange={(e) => setBanco(e.target.value)} />
-                </fieldset>
 
             <button onClick={addNewClient}>Cadastrar Cliente</button>
         </div>
