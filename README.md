@@ -23,8 +23,8 @@ do banco de dados.
 
 <br>
 
-<p>Com o banco instalado e as todas as dependencias do projeto baixadas, abra o terminal e entre na pasta "back" para rodar o comando yarn "start", ele iniciara nosso
-servidos, a partir disso basta utilizar a aplicação</p>
+<p>Com o banco instalado e as todas as dependencias do projeto baixadas, abra o terminal e entre na pasta "back" para rodar o comando "yarn start", ele dara inicio nosso
+servidor, a partir disso basta utilizar a aplicação</p>
 <br/>
 <h1>Dependencias utilizadas e descrição</h1>
 <h2>Dependencias para o back-and</h2>
