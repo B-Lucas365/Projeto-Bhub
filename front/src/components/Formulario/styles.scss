@@ -37,6 +37,7 @@
 
     }
 
+    
     fieldset{
         border: none;
         display: flex;
@@ -58,6 +59,22 @@
 
          }
     }
+
+    .conta{
+        gap: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        :nth-child(1){
+            width: 100%;
+        }
+        :nth-child(2){
+            width: 40%;
+        }
+        :nth-child(3){
+            width: 50%;
+        }
+    }
+
 
     button{ 
         padding: .7rem 2rem;
