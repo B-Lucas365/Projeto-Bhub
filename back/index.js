@@ -57,3 +57,19 @@ const verificarClienteNaoExistente = (req, res, next) => {
     })
 
 }
+
+
+// criandos clientes na base de dados
+app.post('/clientes', verificarClienteExistente,(req, res) => {
+    const {razaoSocial, telefone, endereco, faturamentoDeclarado} = req.body
+
+    mysqlConnection.query(
+        'INSERT INTO clientes (razao_social, telefone, endereco, faturamento_declarado) VALUES (? , ? , ? , ? )',
+        [razaoSocial, telefone, endereco, faturamentoDeclarado], (err, rows, fields) => {
+        if(!err){
+            res.send(rows)
+        }else{
+            res.send(err)
+        }
+    })
+})
