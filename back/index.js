@@ -85,3 +85,15 @@ app.get('/clientes', (req, res) => {
         }
     })
 })
+
+app.post('/clienteRazaoSocial', verificarClienteNaoExistente,(req, res) => {
+    const {razaoSocial} = req.body
+
+    mysqlConnection.query('SELECT * FROM clientes WHERE razao_social = ?', [razaoSocial], (err, rows, fields) => {
+        if(!err){
+            res.send(rows)
+        }else{
+            res.send(err)
+        }
+    })
+})
