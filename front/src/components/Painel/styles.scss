@@ -1,0 +1,50 @@
+.search{
+    display: flex;
+    justify-content: space-between;
+    
+    input{
+        border-radius: 5px 0 0 5px;
+        border: 1px solid #c1c1c1;
+        outline: none;
+        padding-left: 1rem;
+    }
+
+    button{
+        background: #FF5EB5;
+        padding: 5px 9px;
+        border-radius: 0 5px 5px 0;
+        border: 1px solid black;
+        border-left: none;
+        cursor: pointer;
+    }
+}
+
+.clientes{
+    margin-top: 3.25rem;
+    font-family: Roboto, sans-serif;
+
+    table{
+        width: 100%;
+        // text-align: center;
+        border: 1px solid #c1c1c1;
+        padding: 1.25rem;
+        border-radius: 5px;
+
+        tr{
+            height: 2rem;
+            th{
+                text-align: start;
+                font-weight: 600;
+                color: #3763FF;
+            }
+
+            td{
+                img{
+                    width: 1.2rem;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+}
