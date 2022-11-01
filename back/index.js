@@ -22,3 +22,38 @@ mysqlConnection.connect((err) => {
         console.log(`Erro ao conectar no banco de dados: ${err}`)
     }
 })
+
+app.listen(3000, ()=> console.log('rodando na porta 3000'))
+
+
+// Midlewares
+const verificarClienteExistente = (req, res, next) => {
+    const {razaoSocial} = req.body
+
+    mysqlConnection.query('SELECT * FROM clientes WHERE razao_social = ?', [razaoSocial], (err, rows, fields) => {
+        if(!err && rows != ""){
+            return res.status(400).send("Cliente já cadastrado!")
+        }else if(!err && rows == ""){
+            return next()
+        }else {
+            res.send(err)
+        }
+    })
+
+}
+
+const verificarClienteNaoExistente = (req, res, next) => {
+    const {razaoSocial} = req.body
+
+    mysqlConnection.query('SELECT * FROM clientes WHERE razao_social = ?', [razaoSocial], (err, rows, fields) => {
+
+        if(!err && rows == ""){
+            return res.status(400).send("Cliente não cadastrado")
+        }else if(!err && rows != ""){
+            return next()
+        }else{
+            res.send(err)
+        }
+    })
+
+}
