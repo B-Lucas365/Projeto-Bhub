@@ -73,3 +73,15 @@ app.post('/clientes', verificarClienteExistente,(req, res) => {
         }
     })
 })
+
+
+// consultar todos os clientes
+app.get('/clientes', (req, res) => {
+    mysqlConnection.query('SELECT * FROM clientes', (err, rows, fields) => {
+        if(!err){
+            res.send(rows)
+        }else{
+            res.send(err)
+        }
+    })
+})
